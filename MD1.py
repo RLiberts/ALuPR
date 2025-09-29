@@ -7,8 +7,8 @@ Programma izveidota: 29.09.2025.
 
 while True: # Galvenais cikls, kas ļauj atkārtotu izpildi.
     # Pieņem, ka vislaik tiks ievadīti veseli skaitļi.
-    m = int(input("Ievadi intervāla sākuma punktu (vesels skaitlis >= 1):"))
-    n = int(input("Ievadi intervāla beigu punktu (vesels skaitlis >= 1):"))
+    m = int(input("Ievadi intervāla sākuma punktu (vesels skaitlis > 0):"))
+    n = int(input("Ievadi intervāla beigu punktu (vesels skaitlis > 0):"))
     k = int(input("Ievadi dalītāju (vesels skaitlis > 0):"))
 
     # Pārbauda, vai ievadītās vērtības ir loģiski pieļaujamas
@@ -41,3 +41,4 @@ m=18, n=1, k=3              Sākuma intervāla vērtībai(M) jābūt mazākai pa
 m=1, n=5, k=10              Nav atrasts neviens skaitlis intervālā, kas dalās ar 10
 
 """
+
