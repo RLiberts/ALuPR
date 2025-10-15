@@ -7,14 +7,16 @@ Programma izveidota: 29.09.2025.
 
 while True: # Galvenais cikls, kas ļauj atkārtotu izpildi.
     # Pieņem, ka vislaik tiks ievadīti veseli skaitļi.
-    m = int(input("Ievadi intervāla sākuma punktu (vesels skaitlis > 0):"))
-    n = int(input("Ievadi intervāla beigu punktu (vesels skaitlis > 0):"))
-    k = int(input("Ievadi dalītāju (vesels skaitlis > 0):"))
-
+    m = int(input("Ievadi intervāla sākuma punktu, M (vesels skaitlis >= 1):"))
+    n = int(input("Ievadi intervāla beigu punktu, N (vesels skaitlis >= 1):"))
     # Pārbauda, vai ievadītās vērtības ir loģiski pieļaujamas
     if m > n:
         print("Sākuma intervāla vērtībai(M) jābūt mazākai par beigu intervāla vērtību(N)")
     else:
+        k = int(input("Ievadi dalītāju, K (vesels skaitlis > 0):"))
+        while k<=0:
+            print("Dalītājam jābūt lielākam par 0.")
+            k = int(input("Ievadi dalītāju, K (vesels skaitlis > 0):"))
         # Galvenais bloks, kur iet cauri visiem intervāla skaitļiem un pārbauda, vai tie dalās ar lietotāja norādīto dalītāju.
         print("Skaitļi, kuri atrodas intervālā", m, "-", n, "un dalās ar", k, ":")
         num = False # Deklerē mainīgo, kura vērtība reflektē vai vispār ir atrasts kāds skaitlis, kas dalās ar ievadīto dalītāju.
@@ -26,10 +28,10 @@ while True: # Galvenais cikls, kas ļauj atkārtotu izpildi.
             print("Nav atrasts neviens skaitlis intervālā, kas dalās ar", k)
 
     # Atkārtotas izpildes izvēle
-    turpinat = input("Veikt atkārtoti izvēli? (j/n)").lower().strip()
-    if turpinat == "j":
+    turpinat = input("Veikt atkārtoti izvēli? (1/0)").lower().strip()
+    if turpinat == "1":
         continue
-    elif turpinat == "n":
+    elif turpinat == "0":
         print("Beidz darbu.")
         exit()
    
@@ -39,6 +41,5 @@ Ievade                      Programmas vēlamā reakcija
 m=1, n=18, k=3              3, 6, 9, 12, 15, 18
 m=18, n=1, k=3              Sākuma intervāla vērtībai(M) jābūt mazākai par beigu intervāla vērtību(N)
 m=1, n=5, k=10              Nav atrasts neviens skaitlis intervālā, kas dalās ar 10
-
+m=1, n=18, k=0              Dalītājam jābūt lielākam par 0.
 """
-
