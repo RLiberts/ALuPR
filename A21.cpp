@@ -10,20 +10,20 @@ using namespace std;
 
 int main(){
 int ok;
-do //do while nodrošina atkārtotas izpildes iespējas
+do //do while nodrošina atkārtotas izpildes iespējas.
 {
-int m,n,k; //tiek deklerēti mainīgie, m ir intervāla sākumpunkts, n beigu punkts, k
-bool num=false; //deklerē boolean tipa mainīgo, kas aptvers to vai vispār pastāv kāds skaitlis, kas dalās noteiktajā intervālā
-                //Piešķir vērtību false, kamēr nav atrasts neviens skaitlis, kas dalās ar k intervālā [n;m]
+int m,n,k; //tiek deklerēti mainīgie, m ir intervāla sākumpunkts, n beigu punkts, k dalītājs
+bool num=false; //deklerē boolean tipa mainīgo, kas aptvers to vai vispār pastāv vismaz viens tāds skaitlis, kas dalās noteiktajā intervālā
+                //Piešķir vērtību false, kamēr nav atrasts neviens skaitlis, kas dalās ar k intervālā [n;m].
 do
 { //Iekšējs cikls, kas ļauj atkārtotu ievadi, ja lietotāja ievadītais sākuma punkts ir lielāks par beigu punktu
 cout << "Ievadi intervāla sākuma punktu (naturāls skaitlis >= 1):" << endl;
 cin>> m;
 cout << "Ievadi intervāla beigu punktu (naturāls skaitlis >= 1):" << endl;
 cin>> n;
-if (m>n) cout<<"Sākuma intervāla vērtībai jābūt mazākai par beigu intervāla vērtību"<<endl; //Sākuma punktam jābūt mazākam nekā intervāla beigu punktam
+if (m>n) cout<<"Sākuma intervāla vērtībai jābūt mazākai par beigu intervāla vērtību"<<endl; //Sākuma punktam jābūt mazākam nekā intervāla beigu punktam.
 }while(m>n); //Iespējams beigt ciklu tikai tad, kad ievadītas pareizas vērtības. Intervāla sākumpunkts mazāks nekā beigu punkts.
-do
+do //cikls, kas pārbauda vai ir iespējams  vispār veikt dalīšanas operāciju jeb vai skaitlis ir lielāks par 0.
 {
 cout << "Ievadi dalītāju (naturāls skaitlis >= 1):" << endl;
 cin >> k;
@@ -54,3 +54,4 @@ m=18, n=1, k=3              Sākuma intervāla vērtībai(M) jābūt mazākai pa
 m=1, n=5, k=10              Nav atrasts neviens skaitlis intervālā, kas dalās ar 10
 m=1, n=18, k=-2             Dalītājs nedrīkst būt vienāds ar nulli
 *************************************************************************************/
+
