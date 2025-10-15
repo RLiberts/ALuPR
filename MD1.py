@@ -3,6 +3,7 @@ Ričards Nils Liberts, rl25036
 A21. Doti 3 naturāli skaitļi m, n un k. 
 Izdrukāt tos skaitļus, kuri atrodas intervālā [m,n] un kuri dalās ar k bez atlikuma.
 Programma izveidota: 29.09.2025.
+Programma papildināta: 15.10.2025.
 """
 
 while True: # Galvenais cikls, kas ļauj atkārtotu izpildi.
@@ -43,3 +44,4 @@ m=18, n=1, k=3              Sākuma intervāla vērtībai(M) jābūt mazākai pa
 m=1, n=5, k=10              Nav atrasts neviens skaitlis intervālā, kas dalās ar 10
 m=1, n=18, k=0              Dalītājam jābūt lielākam par 0.
 """
+
