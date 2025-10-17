@@ -25,7 +25,7 @@ while True: # Galvenais cikls, kas ļauj atkārtotu izpildi.
             if i % k == 0: # šī darbība pārbauda nepieciešama, lai pārbaudītu, vai skaitlis i dalās ar k bez atlikuma.
                 print(i)
                 num = True # Atrodot vismaz vienu tādu skaitli, kas dalās ar k, mainīgā vērtībai tiek piešķirts True.
-        if not num: # Ja netiek atrasts tāds skaitlis, kas dalās ar k, mainīgā vērtība nemainīgi paliek False, kas ļauj izdrukāt paziņojumu, ka nav tāds skaitlis, kas dalās ar k
+        if num == False: # Ja netiek atrasts tāds skaitlis, kas dalās ar k, mainīgā vērtība nemainīgi paliek False, kas ļauj izdrukāt paziņojumu, ka nav tāds skaitlis, kas dalās ar k
             print("Nav atrasts neviens skaitlis intervālā, kas dalās ar", k)
 
     # Atkārtotas izpildes izvēle
@@ -44,4 +44,5 @@ m=18, n=1, k=3              Sākuma intervāla vērtībai(M) jābūt mazākai pa
 m=1, n=5, k=10              Nav atrasts neviens skaitlis intervālā, kas dalās ar 10
 m=1, n=18, k=0              Dalītājam jābūt lielākam par 0.
 """
+
 
