@@ -1,0 +1,125 @@
+/* Ričards Nils Libert, rl25036 */
+
+#page-body{
+    margin:0px;
+    padding:0px;
+    font-family:Montserrat, sans-serif;
+    color:rgb(255, 255, 255);
+    background-image:url(https://images.unsplash.com/photo-1614850523011-8f49ffc73908?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMGdyYWRpZW50fGVufDB8fDB8fHww&fm=jpg&q=60&w=3000);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color: rgb(55,55,160);
+}
+
+#main-header{
+    padding:20px;
+    text-align:center;
+    background-color:rgb(40,60,80);
+}
+
+#site-title{
+    font-family:Roboto Mono, sans-serif;
+    font-weight:bolder;
+    font-size:48px;
+}
+
+.nav-link{
+    color:white;
+    display:inline-block;
+    text-transform:uppercase;
+    text-decoration:none;
+    width:100px;
+    height:35px;
+    padding:5px;
+    margin:10px;
+}
+
+#main-footer{
+    text-align:center;
+}
+
+h2{
+    font-size:24px;
+    font-weight:lighter;
+    text-align:center;
+}
+
+p{
+    text-align:center;
+    text-wrap:balance;
+    margin:15px;
+    padding:0x
+}
+
+.intro-image{
+    display:block;
+    width:400px;
+    height:auto;
+    margin:auto;
+}
+
+#intro-section{
+    padding:20px;
+    background-color:rgb(40,60,80);
+    margin:20px;
+    border-radius:20px;
+    border-top-style:groove;
+    border-bottom-style:groove;
+    border-right-style:double;
+    border-left-style:double;
+    border-width:15px;
+    border-color:rgb(55,55,160);
+}
+
+.menu-list{
+    list-style-type:disc;
+}
+
+.specials-table{
+    border-collapse:collapse;
+    border-width:2px;
+    border-color:black;
+    margin-left:20px;
+}
+
+.table-heading{
+    font-family:Roboto Mono, sans-serif;
+    font-weight:bolder;
+    background-color:rgb(40,60,80);
+}
+.table-row{
+    background-color:rgb(55,55,160);
+}
+
+.form-input{
+    width:25%;
+    height:auto;
+    padding:10px;
+    border:5px;
+    border-color: rgb(55,55,160);
+    background-color:rgb(40,60,80);
+    border-radius:5px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.form-textarea{
+    padding:5px;
+    border:5px;
+    border-color: rgb(55,55,160);
+    background-color:rgb(140, 170, 200);
+    border-radius:5px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.form-button{
+    background-color:rgb(40,60,80);
+    color:white;
+    padding:5px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
