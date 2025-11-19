@@ -44,7 +44,7 @@ int ElementuIevade(int i){
 int skaitlis;
 do{
 cin>>skaitlis;
-if(skaitlis<0) cout<< "Kļūdaina vērtība. Jāievada nenegatīvs skaitlis(skaitlis>0.)"<<endl<<i+1<<".elements:";
+if(skaitlis<0) cout<< "Kļūdaina vērtība. Jāievada nenegatīvs skaitlis(skaitlis>=0.)"<<endl<<i+1<<".elements:";
 }while(skaitlis<0);
 return skaitlis;
 }
@@ -114,4 +114,5 @@ n=1, A={}                     Kļūdaina vērtība. Masīva izmēram jābut diap
 n=3 A={-3;...}                Kļūdaina vērtība. Jāievada nenegatīvs skaitlis(skaitlis>0.)
                               1.elements:
 *************************************************************************************/
+
 
