@@ -44,7 +44,7 @@ int ElementuIevade(int i){
 int skaitlis;
 do{
 cin>>skaitlis;
-if(skaitlis<0) cout<< "Kļūdaina vērtība. Jāievada nenegatīvs skaitlis(skaitlis>=0.)"<<endl<<i+1<<".elements:";
+if(skaitlis<0) cout<< "Kļūdaina vērtība. Jāievada vesels nenegatīvs skaitlis(skaitlis>=0.)"<<endl<<i+1<<".elements:";
 }while(skaitlis<0);
 return skaitlis;
 }
@@ -62,18 +62,19 @@ return x;
 int main(){
 int ok;
 do{
-const int N=100; //deklerē konstantu masīva maksimālo garumu
-int A[N], n;
+int * A, n;
 
 //Lietotāja ievade masīva elementu skaitam.
 do{
-cout<<"Ievadiet masīva A izmēru n.(2<=n<=100):"<<endl;
+cout<<"Ievadiet masīva A izmēru n.(1<=n):"<<endl;
 cin>>n;
-if(n<2||n>N) cout<<"Kļūdaina vērtība. Masīva izmēram jābut diapazonā no 2 līdz 100.";
-}while(n<2||n>N);
+if(n<1) cout<<"Kļūdaina vērtība. Masīvam jāsastāv vismaz no viena elemeta. ";
+}while(n<1);
+
+A = new int[n];
 
 //Katra masīva elementa ievade
-cout<<"Ievadiet masīva A elementus. Nenegatīvus skaitļus"<<endl;
+cout<<"Ievadiet masīva A elementus. Veselus nenegatīvus skaitļus"<<endl;
 for(int i=0; i<n; i++){
 cout<<i+1<<".elements:";
 A[i]=ElementuIevade(i); //Izsauc funkciju korektai nenegatīva skaitļa ievadei.
@@ -94,7 +95,7 @@ for(int i=0; i<n; i++){
 starpiba = Modulis(SummaPirms(A,i)-SummaPec(A,i, n));
 if(starpiba==starpiba0) cout<<"Elementa indekss:"<<i<<endl;
 }
-
+delete [] A;
 cout << "Vai turpināt (1) vai beigt (0)?" << endl;
 cin >> ok;
 }while(ok==1);
@@ -109,10 +110,8 @@ n=5, A={1;5;3;2;4}            Elementa indekss:2
 n=4, A={2;2;2;2}              Elementa indekss:1
                               Elementa indekss:2
 
-n=1, A={}                     Kļūdaina vērtība. Masīva izmēram jābut diapazonā no 2 līdz 100.Ievadiet masīva A izmēru n.(2<=n<=100):
-
+n=0, A={}                     Kļūdaina vērtība. Masīvam jāsastāv vismaz no viena elemeta. Ievadiet masīva A izmēru n.(1<=n):
 n=3 A={-3;...}                Kļūdaina vērtība. Jāievada nenegatīvs skaitlis(skaitlis>0.)
                               1.elements:
 *************************************************************************************/
-
 
