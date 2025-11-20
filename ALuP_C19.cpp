@@ -36,9 +36,9 @@ return summa;
 /*
 int ElementuIevade();
 Funkcija ElementuIevade() -
-pieprasa lietotājam ievadīt veselus nenegatīvus, pārbauda
-atbilstību. Kļūdainā gadījumā pieprasa atkārtotu ievadi. Atgriež kā
-rezultātu korekti ievadītu nenegatīvu veselu skaitli.
+pieprasa lietotājam ievadīt veselus nenegatīvus un pārbauda
+to validāti. Kļūdainā gadījumā pieprasa atkārtotu ievadi. Atgriež kā
+rezultātu korektu nenegatīvu veselu skaitli.
 */
 int ElementuIevade(int i){
 int skaitlis;
@@ -51,7 +51,7 @@ return skaitlis;
 /*
 int Modulis(int x);
 Funkcija Modulis(x) -
-atgriež kā rezultātu  veselu skaitli
+atgriež kā rezultātu veselu skaitli
 kā nenegatīvu.
 */
 int Modulis(int x){
