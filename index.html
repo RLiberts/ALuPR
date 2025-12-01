@@ -2,87 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>University Cafeteria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies 3rd Lab</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="page-body">
-
-    <header id="main-header" class="header-section">
-        <h1 id="site-title" class="main-title">Welcome to University Cafeteria</h1>
-        <nav id="main-nav" class="nav-bar">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Menu</a>
-            <a href="#" class="nav-link">About</a>
-            <a href="#" class="nav-link">Contact</a>
+<body>
+    <header id="main-header">
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section id="intro-section" class="intro section">
-            <img src="https://media.istockphoto.com/id/1411322814/photo/happy-women-eating-at-a-buffet-style-cafeteria.jpg?s=1024x1024&w=is&k=20&c=OiTsZjELQITsEeE-gR2Sq9vI-M4IaCRzQ9xpJN063mk=" alt="Cafeteria image" class="float-img intro-image">
-            <p id="intro-text" class="description">At University Cafeteria, we serve affordable, nutritious meals to keep students energized throughout the day. Whether you’re grabbing breakfast before class or meeting friends for lunch, we’ve got something for everyone.</p>
+    <main>
+        <section class="content">
+            <h2>Welcome to My Website</h2>
+            <p>This is a sample paragraph in the main content area. Here you can include any information you want to share with your visitors. This site aims to provide valuable content and services to its users.</p>
+            <div class="image-container">
+                <img src="https://placehold.co/600x400" alt="Sample Image" class="responsive-image">
+                <div class="overlay-text">Overlay Text on Image</div>
+            </div>
+            <h3>Image Gallery</h3>
+            <div class="image-gallery">
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 1"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 2"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 3"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 4"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 5"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 6"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 7"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 8"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 9"></div>
+                <div class="image-item"><img src="https://placehold.co/300x200" alt="Image 10"></div>
+            </div>
         </section>
 
-        <section id="menu-section" class="menu section">
-            <h2 class="section-title">Our Menu</h2>
-            <ul class="menu-list">
-                <li class="menu-item">Grilled Chicken Sandwich</li>
-                <li class="menu-item">Vegetarian Pasta</li>
-                <li class="menu-item">Iced Coffee</li>
-                <li class="menu-item">Fruit Smoothies</li>
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is a sidebar with additional information or links. Here you can include links to popular articles, recent posts, or any other useful resources.</p>
+            <h4>Popular Articles</h4>
+            <ul>
+                <li><a href="#">How to Build a Website</a></li>
+                <li><a href="#">Top 10 CSS Tricks</a></li>
+                <li><a href="#">JavaScript Basics for Beginners</a></li>
+                <li><a href="#">Understanding Flexbox</a></li>
+                <li><a href="#">The Importance of Responsive Design</a></li>
             </ul>
-        </section>
-
-        <section id="specials-section" class="specials section">
-            <h2 class="section-title">Weekly Specials</h2>
-            <table class="specials-table">
-                <thead>
-                    <tr>
-                        <th class="table-heading">Day</th>
-                        <th class="table-heading">Special</th>
-                        <th class="table-heading">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-row">
-                        <td class="table-cell">Monday</td>
-                        <td class="table-cell">Free Soup with Sandwich</td>
-                        <td class="table-cell">$4.50</td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="table-cell">Wednesday</td>
-                        <td class="table-cell">Pasta Combo</td>
-                        <td class="table-cell">$6.00</td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="table-cell">Friday</td>
-                        <td class="table-cell">2-for-1 Smoothies</td>
-                        <td class="table-cell">$5.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="contact-section" class="contact section">
-            <h2 class="section-title">Contact Us</h2>
-            <form id="contact-form" class="form">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" id="name" name="name" class="form-input">
-
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-input">
-
-                <label for="message" class="form-label">Message:</label>
-                <textarea id="message" name="message" rows="4" class="form-textarea"></textarea>
-
-                <button type="submit" class="form-button">Send</button>
-            </form>
-        </section>
+            <h4>Recent Posts</h4>
+            <ul>
+                <li><a href="#">Learning HTML in 2024</a></li>
+                <li><a href="#">Best Practices for Web Development</a></li>
+                <li><a href="#">Responsive Design Made Easy</a></li>
+                <li><a href="#">SEO Strategies for Beginners</a></li>
+                <li><a href="#">Top 5 JavaScript Frameworks</a></li>
+            </ul>
+        </aside>
     </main>
 
-    <footer id="main-footer" class="footer-section">
-        <p class="footer-text">&copy; 2025 University Cafeteria. All rights reserved.</p>
-    </footer>
+    <section class="additional-info">
+        <h3>Additional Information</h3>
+        <p>Here is some more information about the services we offer. Our goal is to provide the best user experience through our platform.</p>
+        <h4>Our Services</h4>
+        <ul>
+            <li>Web Development</li>
+            <li>SEO Optimization</li>
+            <li>Content Creation</li>
+            <li>Digital Marketing</li>
+            <li>Social Media Management</li>
+        </ul>
+    </section>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 My Website. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <p>Follow us on social media!</p>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
