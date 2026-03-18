@@ -118,7 +118,7 @@ do{
     atbrivo(first);
     cout << "Saraksts pēc atbrīvošanas: "; 
     print(first);
-    cout << "Vai vēlaties turpināt? (1-jā, 0-nē): ";
+    cout << "Vai turpināt (1) vai beigt (0)? ";
     cin >> ok;
 }while(ok != 0);
 return 0;
