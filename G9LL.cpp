@@ -116,7 +116,8 @@ do{
         cout << "Sarakstā nav divu elementu ar vienādām vērtībām." << endl;
     };
     atbrivo(first);
-
+    cout << "Saraksts pēc atbrīvošanas: "; 
+    print(first);
     cout << "Vai vēlaties turpināt? (1-jā, 0-nē): ";
     cin >> ok;
 }while(ok != 0);
