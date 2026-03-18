@@ -4,7 +4,7 @@ vai sarakstā ir  vismaz divi elementi ar vienādām vērtībām.
 
 Ričards Nils Liberts, rl25036
 16.03.2026.
- * */
+**/
 #include <iostream>
 using namespace std;
 
