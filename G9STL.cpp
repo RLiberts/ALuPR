@@ -59,3 +59,18 @@ int main(){
     }while (ok == 1);
     return 0;
 }
+
+
+/*******************************************
+TESTA PLĀNS
+
+Ievads              Vēlamā reakcija                        Rezultāts
+-----------------------------------------------------------------------
+n=5: 5 3 8 3 1       JĀ (3 atkārtojas)                        +
+n=4: 10 20 30 40     NĒ (visi atšķirīgi)                      +
+n=3: 7 7 7           JĀ (visi vienādi)                        +
+n=1: 5               NĒ (viens elements, nevar būt pāris)     +
+n=-1                 Elementu skaitam jābūt pozitīvam          +
+n=2: 4 4             JĀ (abi vienādi)                         +
+n=2: 4 5             NĒ (abi atšķirīgi)                       +
+*******************************************/
