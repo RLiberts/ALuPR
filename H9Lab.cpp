@@ -181,3 +181,29 @@ int main() {
     drukatFailu("f3.bin");
     return 0;
 }
+
+
+/******************************************
+Ievads (failu saturs)                          Vēlamā reakcija (f3.bin saturs)       Rezultāts
+----------------------------------------------------------------------------------------------
+f1: abols, citrons                             abols, banans, citrons, datele           +
+f2: banans, datele
+
+f1: abols, citrons, kalis                      abols, banans, citrons, datele,          +
+f2: banans, citrons, datele, zemene            kalis, zemene
+
+f1: abols, banans                              abols, banans                            +
+f2: (tukšs fails)
+
+f1: (tukšs fails)                                                                       +
+f2: (tukšs fails)
+
+f1: a, b, c                                    a, b, c, d, e, f                         +
+f2: d, e, f
+
+f1: citrons                                    citrons                                  +
+f2: citrons
+
+f1: b, d                                       a, b, c, d                               +
+f2: a, c
+*******************************************/
