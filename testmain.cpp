@@ -66,10 +66,10 @@ bool test_f() {
 int main() {
     // Izvada 1 = tests nokārtots, 0 = tests neizturēts
     cout<<"test_a:"<<test_a()<<endl;
-    cout<<"test_B:"<<test_b()<<endl;
-    cout<<"test_C:"<<test_c()<<endl;
-    cout<<"test_D: "<<test_d()<<endl;
-    cout<<"test_E:"<< test_e()<<endl;
-    cout<<"test_F:"<< test_f()<<endl;
+    cout<<"test_b:"<<test_b()<<endl;
+    cout<<"test_c:"<<test_c()<<endl;
+    cout<<"test_d: "<<test_d()<<endl;
+    cout<<"test_e:"<< test_e()<<endl;
+    cout<<"test_f:"<< test_f()<<endl;
     return 0;
 }
