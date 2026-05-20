@@ -4,11 +4,10 @@ using namespace std;
 
 /**
 elem* veidot(elem*& last, int skaitli[], int n);
-
-Funkcija veidot(last, skaitli[], n) - pievieno jaunu elementu ar
-vērtību i saistītā saraksta beigās. Tukša saraksta gadījumā,
-jaunais elements kļūst par pirmo un pēdējo,citādi, tas tiek piekabināts
-pēdējam elementam.
+Funkcija veidot(last, skaitli[], n) - pārveido parasto masīvu 'skaitli' 
+ar 'n' elementiem par dinamisku saistīto sarakstu. Katrs masīva elements
+tiek pievienots saraksta beigās, izmantojot funkciju pievienot(). Atgriež sākuma rādītāju 
+uz izveidoto sarakstu. Atgriež norādi uz saraksta pirmo elementu.
 **/
 elem* veidot(elem*& last,int skaitli[], int n){
     elem* first=NULL;
