@@ -1,59 +1,65 @@
-/*
+/**
+GG
+G9. Uzrakstīt funkciju, kas pārbauda,
+vai sarakstā ir  vismaz divi elementi ar vienādām vērtībām.
+
 Ričards Nils Liberts, rl25036
-
-Izveidot programmu valodā C++,
-izmantojot objektorientētās programmēšanas
-līdzekļus un strukturējot programmu vismaz
-trīs failos. Klases hederi obligāti novietot atsevišķā
-hedera failā (program.h). Visas metodes realizēt ārpus
-hedera faila – speciālā C++ failā (program.cpp).
-Funkcija main ievietojama vēl citā C++ failā (main.cpp).
-Klases dati pēc noklusēšanas ir slēpti (private), bet
-metodes atklātas (public). Šīs programmas ietvaros NAV
-obligāti jānodrošina tāda lietotāja saskarne, kāda tika
-prasīta iepriekšējos trīs uzdevumos (main funkciju drīkst
-“cieti” iekodēt). Citas prasības sk. Laboratorijas darbu noteikumos.
-
-D19. Izveidot klasi "Laiks" - Time, kurā tiek glabāti trīs
-skaitļi - stunda, minūte, sekunde. Klasei izveidot šādas metodes:
-(1) konstruktors, ar kuru tiek padotas sākotnējās vērtības,
-(2) destruktors, kurš paziņo par objekta likvidēšanu,
-(3) metode "Mainīt" - change ar trīs parametriem, kas uzstāda jaunās vērtības,
-(4) metode "Drukāt" - print, kas izdrukā laiku, (5) metode "Distance" - distance
-ar trīs parametriem - citu laika momentu, kas aprēķina un izdrukā attālumu starp
-abiem laika momentiem gan sekundēs, gan minūtēs, gan apvienoti
-(stundās, minūtēs un sekundēs).
-
-Programma izveidota: 30.11.2025.
-*/
+20.05.2026.
+**/
 #include <iostream>
-#include "Lab4.h"
+#include "func.h"
 using namespace std;
 
-int main(){
-    Laiks laiks1(15,30,0);
-    laiks1.Drukāt();
-    laiks1.Distance(16,45,0);
-    laiks1.Mainīt(17,30,05);
-    laiks1.Drukāt();
-    laiks1.Mainīt(1,1,1);
-    laiks1.Drukāt();
-    return 0;
+int main() {
+int ok;
+do{
+    elem* first = NULL, *last = NULL;
+    int n, num;
+    cout << "Ievadi elementu skaitu: ";
+    cin >> n;
+
+    try{
+        if(n<2){
+            throw 1;
+        }
+
+        cout << "Ievadi elementus: ";
+        for (int i = 0; i < n; i++) {
+            int num;
+            cin >> num;
+            pievienot(first, last, num);
+        }
+
+        cout << "Saraksts: ";
+        print(first);
+
+        if(irDivi(first)) {
+            cout << "Sarakstā ir vismaz divi elementi ar vienādām vērtībām." << endl;
+        } else {
+            cout << "Sarakstā nav divu elementu ar vienādām vērtībām." << endl;
+        };
+        atbrivo(first);
+        cout << "Saraksts pēc atbrīvošanas: ";
+        print(first);
+    }catch(int e){
+        cout<<"Error: "<<e<<endl<<"Elementu skaitam jābūt vismaz 2."<<endl;
+    }
+    cout << "Vai turpināt (1) vai beigt (0)? ";
+    cin >> ok;
+}while(ok != 0);
+return 0;
 }
 
+/*******************************************
+TESTA PLĀNS
 
-/*************************Testa plāns***********************************************
-
-Ievade                        Programmas vēlamā reakcija
-Laiks laiks1(15,30,0);        Objekts izveidots.
-laiks1.Drukāt();              15:30:00
-laiks1.Distance(16,45,0);     Attālums starp abiem laika momentiem sekundēs:4500
-                              Attālums starp abiem laika momentiem minūtēs:75
-                              Attālums starp abiem laika momentiem (stundas:minūtes:sekundes): 01:15:00
-
-laiks1.Mainīt(17,30,05);      Vērtības mainītas.
-laiks1.Drukāt();              17:30:05
-laiks1.Mainīt(1,1,1);         Vērtības mainītas.
-laiks1.Drukāt();              01:01:01
-                              Likvidēts objekts ar adresi 0xd9ba1ffd84
-*************************************************************************************/
+Ievads              Vēlamā reakcija                        Rezultāts
+-----------------------------------------------------------------------
+n=5: 5 3 8 3 1       JĀ (3 atkārtojas)                        +
+n=4: 10 20 30 40     NĒ (visi atšķirīgi)                      +
+n=3: 7 7 7           JĀ (visi vienādi)                        +
+n=1: 5               NĒ (viens elements, nevar būt pāris)     +
+n=-1                  Kļūda. Elementu skaitam jābūt pozitīvam  +
+n=2: 4 4             JĀ (abi vienādi)                         +
+n=2: 4 5             NĒ (abi atšķirīgi)                       +
+*******************************************/
